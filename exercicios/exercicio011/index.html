@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens dinâmicas</title>
+</head>
+<body>
+    <h1>Imagens dinâmicas</h1>
+    <p>tente abrir esse site em dispositivos com tamanhos de tela diferente ou simplesmente diminua a janela do seu navegador</p>
+    <picture>
+        <source media="(max-width: 700px)" srcset="imagens/fotop.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/fotom.png" type="image/png">
+        <img src="imagens/fotog.png" alt="imagem flexivel">
+    </picture>
+    <p>tag picture e source de media type ( Ordem correta primeiro pequno dps medio dps a imagen base) </p>
+
+    <h1>reproduzindo audios </h1>
+    <p>para reproduzir audios no html é necessário usar a tag audio e o parametro controls</p>
+    <audio src="midia/matuefilhodanoite.mp3"controls></audio>
+    <!--MP3 WAV OGG-->
+    <!--Cuidado aos tamanhos dos arquivos de audio-->
+    <p>Os audios dentro do codigo podem ter a mesma multi compatibilidade igual as imagens acima</p>
+    <audio preload="metadata" controls>
+        <source src="midia/matuefilhodanoite.mp3" type="audio/mpeg">
+        <source src="midia/matuefilhodanoite.wav" type="audio/wav"> <!--Wav sao muito pesados-->
+        <source src="midia/matuefilhodanoite.ogg" type="audio/ogg">
+        <p>seu navegador não consegue reproduzir os arquivos de audio, <a href="midia/matuefilhodanoite.mp3"> clique aqui para baixar o arquivo mp3</a></p>
+    </audio>
+    
+
+
+</body>
+</html>
